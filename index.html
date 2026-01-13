@@ -48,23 +48,25 @@
   <section>
     <h2> Hier kannst du dich gerne für unseren <br>
          imagnären Newsletter anmelden: </h2>
-      <p>Wenn du den ausfüllst, hast du die Chance nichts zu gewinnen :D</p>
-      <form id="contactForm">
-        <label>Vorname:
-          <input type="text" id="fname" name="fname" required>
-        </label>
-        <label>Nachname:
-          <input type="text" id="lname" name="lname" required>
-        </label>
-        <label>Email-Adresse:
-          <input type="email" id="email" name="email" required>
-        </label>
-        <label>Sozialversicherungsnummer:
-          <input type="text" id="sv_number" name="sv_number" required>
-        </label>
+      <fieldset>
+      <legend> Wenn du den ausfüllst, hast du die Chance nichts zu gewinnen :D</legend>
+        <form name="contactForm" id="contactForm" onsubmit="return validateForm()">
+         <label>Vorname:
+           <input type="text" id="fname" name="fname">
+          </label>
+          <label>Nachname:
+            <input type="text" id="lname" name="lname">
+          </label>
+          <label>Email-Adresse:
+            <input type="email" id="email" name="email">
+          </label>
+          <label>Sozialversicherungsnummer:
+            <input type="number" id="sv_number" name="sv_number">
+          </label>
+        </fieldset>
 
-        <h2>Willst du deine Seele für extra Ramen verkaufen?</h2>
-
+        <fieldset>
+        <legend> Willst du deine Seele für extre Ramen verkaufen?</legend>
         <label>
           <input type="radio" id="ja" name="selling_soul" value="yes">
           JA BITTE BITTE BITTE!!!
@@ -74,7 +76,7 @@
           <input type="radio" id="no" name="selling_soul" value="no">
           nö
         </label>
-
+        </fieldset>
         <input type="submit" value="Submit">
       </form>
 
